@@ -99,7 +99,7 @@ function closePopup() {
 const searchInput = document.getElementById("searchInput");
     const placeholderTexts = ["Soto", "Spaghetti", "Salad", "Pizza", "Nasi Goreng"];
 
-    let currentChar = 0;
+
 
     function typeAnimation() {
         let currentText = placeholderTexts[currentIndex];
