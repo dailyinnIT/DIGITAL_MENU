@@ -590,9 +590,16 @@ img.small-photo:hover {
 }
 
 .menu-details h3 {
-    margin-top: 10px;
-    font-size: 1.2em; /* Perkecil ukuran teks judul */
+    color: #FFD700; /* Gold color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Black shadow */
+    font-family: 'calibri', serif; /* Elegant serif font */
+    font-size: 2.2rem; /* Adjust size as needed */
+    font-weight: 600; /* Semi-bold for a premium feel */
+    letter-spacing: 1px; /* Slight spacing for readability */
+    text-transform: uppercase; /* Optional: make text uppercase */
+    margin-bottom: 15px; /* Add space below the heading */
 }
+
 
 .menu-details p {
     font-size: 0.9em; /* Perkecil ukuran teks deskripsi */
