@@ -66,7 +66,22 @@ header {
 }
 
 /* Outline dan animasi halus elegan pada teks judul */
-h1.title-outline-super-luxury {
+.title-outline-super-luxury {
+    color: #FFD700; /* Gold color */
+    font-family: 'calibri', cursive; /* Elegant script font */
+    font-size: 10rem; /* Adjust size as needed */
+    font-weight: 700; /* Bold for emphasis */
+    letter-spacing: 2px; /* Spacing between letters */
+    text-transform: uppercase; /* Uppercase for a bold statement */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Black shadow for depth */
+    border-bottom: 2px solid #FFD700; /* Optional gold border */
+    padding-bottom: 10px; /* Space below text */
+    margin-bottom: 20px; /* Spacing for separation */
+    text-align: center; /* Center align for emphasis */
+    display: inline-block; /* Keeps border under text only */
+    background: linear-gradient(transparent 70%, rgba(255, 215, 0, 0.2) 100%); /* Subtle gold highlight */
+
+
     font-size: 20px;    
     color: rgb(235, 185, 4); /* Warna teks */
     text-align: center;
