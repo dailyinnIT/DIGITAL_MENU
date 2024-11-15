@@ -69,7 +69,7 @@ header {
 .title-outline-super-luxury {
     color: #FFD700; /* Gold color */
     font-family: 'calibri', cursive; /* Elegant script font */
-    font-size: 10rem; /* Adjust size as needed */
+    font-size: 1rem; /* Adjust size as needed */
     font-weight: 700; /* Bold for emphasis */
     letter-spacing: 2px; /* Spacing between letters */
     text-transform: uppercase; /* Uppercase for a bold statement */
@@ -902,6 +902,29 @@ h2 {
     }
 }
 
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.price {
+    font-weight: bold;
+    color: #000;
+    display: block;
+    margin-top: 10px;
+}
+
+.exclude-tax {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    font-style: italic;
+    margin-top: 2px; /* Beri jarak kecil dari harga */
+    text-align: right; /* Letakkan teks di sisi kanan */
+    white-space: nowrap; /* Pastikan teks tidak membungkus ke baris berikutnya */
+    pointer-events: none; /* Agar tidak mengganggu interaksi klik */
+}
 
 
 
