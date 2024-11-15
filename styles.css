@@ -902,19 +902,6 @@ h2 {
     }
 }
 
-.menu-item {
-    position: relative;
-    overflow: hidden;
-    padding: 15px;
-}
-
-.price {
-    font-weight: bold;
-    color: #000;
-    display: block;
-    margin-top: 10px;
-}
-
 .exclude-tax {
     display: block;
     font-size: 10px;
