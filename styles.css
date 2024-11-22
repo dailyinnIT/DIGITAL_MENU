@@ -912,8 +912,187 @@ h2 {
     pointer-events: none; /* Agar tidak mengganggu interaksi klik */
 }
 
+#cart-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
 
 
 
 
+.floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    max-width: 300px;
+}
+
+.cart-header {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.cart-details ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.cart-details li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.cart-details button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cart-details button:hover {
+    background-color: #218838;
+}
+
+
+/* Floating Button */
+/* Floating Button */
+.floating-button {
+    position: fixed;
+    bottom: 80px; /* Jarak dari bawah halaman (di atas footer) */
+    right: 20px; /* Jarak dari sisi kanan */
+    z-index: 1000; /* Agar tombol tetap terlihat di atas konten lain */
+}
+
+.floating-button a {
+    display: inline-block;
+    background-color: #28a745; /* Warna hijau */
+    color: white;
+    font-size: 18px; /* Ukuran teks lebih besar */
+    font-weight: bold;
+    padding: 15px 25px; /* Ukuran tombol lebih besar */
+    border-radius: 30px; /* Membuat tombol berbentuk elips */
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek melayang */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-button a:hover {
+    background-color: #218838; /* Warna saat di-hover */
+    transform: scale(1.1); /* Efek zoom saat di-hover */
+}
+
+
+.floating-button:hover {
+    transform: scale(1.1);
+}
+
+/* Pop-up Form */
+#popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 999;
+    width: 300px;
+}
+
+#popup-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+#popup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#popup-form button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#popup-form button:hover {
+    background-color: #1da851;
+}
+
+#popup-form .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Overlay Background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
 

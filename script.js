@@ -134,3 +134,92 @@ const searchInput = document.getElementById("searchInput");
       }
       
     
+      // Array untuk menyimpan item yang ditambahkan ke keranjang
+let cart = [];
+
+// Fungsi untuk menambahkan item ke keranjang
+function addToCart(itemName, price) {
+    const item = { name: itemName, price: price };
+    cart.push(item);
+
+    // Update jumlah item di keranjang
+    updateCartCount();
+    
+    alert(`${itemName} telah ditambahkan ke keranjang!`);
+}
+
+// Fungsi untuk memperbarui jumlah item di ikon keranjang
+function updateCartCount() {
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = cart.length;
+}
+
+// Fungsi untuk membuka keranjang (tampilkan popup keranjang)
+function openCart() {
+    let cartContent = "Keranjang Anda:\n\n";
+    cart.forEach((item, index) => {
+        cartContent += `${index + 1}. ${item.name} - Rp.${item.price}\n`;
+    });
+
+    if (cart.length === 0) {
+        cartContent = "Keranjang Anda kosong.";
+    }
+
+    alert(cartContent);
+}
+
+      
+      // Fungsi untuk menghapus item dari keranjang
+      function removeFromCart(itemName) {
+          cart = cart.filter(item => item.name !== itemName);
+          updateCartDisplay();
+      }
+      
+      // Fungsi untuk toggle tampilan keranjang
+      function toggleCartDetails() {
+          const cartDetails = document.getElementById("cart-details");
+          cartDetails.style.display = cartDetails.style.display === "block" ? "none" : "block";
+      }
+      
+
+      // Ambil elemen DOM
+const toggleForm = document.getElementById("toggleForm");
+const popupForm = document.getElementById("popup-form");
+const closeForm = document.getElementById("closeForm");
+const overlay = document.getElementById("overlay");
+
+// Event: Tampilkan pop-up
+toggleForm.addEventListener("click", () => {
+    popupForm.style.display = "block"; // Tampilkan pop-up
+    overlay.style.display = "block"; // Tampilkan overlay
+});
+
+// Event: Tutup pop-up
+closeForm.addEventListener("click", () => {
+    popupForm.style.display = "none"; // Sembunyikan pop-up
+    overlay.style.display = "none"; // Sembunyikan overlay
+});
+
+overlay.addEventListener("click", () => {
+    popupForm.style.display = "none"; // Sembunyikan pop-up
+    overlay.style.display = "none"; // Sembunyikan overlay
+});
+
+// Event: Kirim pesan WhatsApp
+document.getElementById("orderButton").addEventListener("click", function() {
+    const roomNumber = document.getElementById("roomNumber").value.trim();
+
+    if (!roomNumber) {
+        alert("Harap masukkan nomor kamar Anda.");
+        return;
+    }
+
+    const whatsappNumber = "+6281280734718";
+    const message = `Halo, saya ingin memesan menu. Nomor kamar saya: ${roomNumber}`;
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank"); // Buka WhatsApp
+    popupForm.style.display = "none"; // Sembunyikan pop-up
+    overlay.style.display = "none"; // Sembunyikan overlay
+});
+
