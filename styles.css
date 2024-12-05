@@ -997,12 +997,26 @@ h2 {
 
 
 /* Floating Button */
-/* Floating Button */
 .floating-button {
     position: fixed;
-    bottom: 80px; /* Jarak dari bawah halaman (di atas footer) */
-    right: 20px; /* Jarak dari sisi kanan */
-    z-index: 1000; /* Agar tombol tetap terlihat di atas konten lain */
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#pesanLink {
+    background-color: #4CAF50; /* Warna latar tombol */
+    color: white;  /* Warna teks */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+#pesanLink.disabled {
+    background-color: gray;
+    cursor: not-allowed;
 }
 
 .floating-button a {

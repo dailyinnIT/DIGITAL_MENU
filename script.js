@@ -223,3 +223,33 @@ document.getElementById("orderButton").addEventListener("click", function() {
     overlay.style.display = "none"; // Sembunyikan overlay
 });
 
+
+function redirectToPage() {
+    var currentDate = new Date();
+    var currentHour = currentDate.getHours();  // Mendapatkan jam saat ini
+
+    if (currentHour >= 7 && currentHour < 21) {
+        // Jam 7 pagi sampai jam 9 malam
+        window.location.href = "pesan.html";  // Redirect ke pesan.html
+    } else {
+        // Jam 9 malam sampai jam 7 pagi
+        window.location.href = "tutup.html";  // Redirect ke tutup.html
+    }
+}
+
+// Set link sesuai waktu saat halaman dimuat
+function checkTime() {
+    var currentDate = new Date();
+    var currentHour = currentDate.getHours();  // Mendapatkan jam saat ini
+    var link = document.getElementById("pesanLink");
+
+    if (currentHour >= 7 && currentHour < 21) {
+        link.innerHTML = "Pesan Sekarang";  // Mengubah teks tombol
+    } else {
+        link.innerHTML = "tutup";  // Mengubah teks tombol
+    }
+}
+
+window.onload = function() {
+    checkTime();  // Set teks tombol berdasarkan waktu saat halaman dimuat
+};
